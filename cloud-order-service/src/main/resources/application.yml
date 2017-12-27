@@ -1,0 +1,18 @@
+server:
+  port: 6002
+spring:
+  application:
+    name: orderService
+
+  cloud:
+    config:
+      discovery:
+        enabled: true
+        service-id: orderService
+
+    inetutils:
+      ignored-interfaces: virbr0,lo
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:5001/eureka

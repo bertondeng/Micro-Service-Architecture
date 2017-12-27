@@ -1,0 +1,26 @@
+server:
+  port: 5001
+
+eureka:
+  instance:
+    prefer-ip-address: true
+    hostname: eureka
+
+  client:
+    registerWithEureka: true
+    fetchRegistry: false
+    service-url:
+      defaultZone: http://localhost:5001/eureka
+
+  server:
+    wait-time-in-ms-when-sync-empty: 0
+    enable-self-preservation: true
+
+spring:
+  application:
+    name: cloud-eureka-server
+  cloud:
+    config:
+      discovery:
+        service-id: cloud-config-server
+        enabled: true
