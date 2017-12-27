@@ -1,0 +1,19 @@
+
+### Maven **
+
+.mvn
+
+
+### Intellij IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+### NetBeans ###
+build/
+nbbuild/
+dist/
+nbdist/
+
+
