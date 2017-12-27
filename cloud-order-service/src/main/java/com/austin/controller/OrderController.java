@@ -3,6 +3,7 @@ package com.austin.controller;
 import com.austin.domain.Order;
 import com.austin.remote.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -18,15 +19,15 @@ import java.time.LocalDateTime;
 @RequestMapping("/order")
 public class OrderController {
 
-    private final ProductService productService;
-
-    private final RestTemplate restTemplate;
+    @Autowired
+    private ProductService productService;
 
     @Autowired
-    public OrderController(ProductService productService, RestTemplate restTemplate) {
-        this.productService = productService;
-        this.restTemplate = restTemplate;
-    }
+    @LoadBalanced
+    private RestTemplate loadBalancedRestTemplate;
+
+    @Autowired
+    private RestTemplate restTemplate;
 
     @GetMapping(value = "/{orderNo}", produces = "application/json")
     public Order orderDetail(@PathVariable("orderNo") Integer orderNo) {
@@ -39,6 +40,6 @@ public class OrderController {
 
     @GetMapping(value = "/load/balance", produces = "application/json")
     public String order() {
-        return restTemplate.getForObject("http://productService/product/list", String.class);
+        return loadBalancedRestTemplate.getForObject("http://productService/product/list", String.class);
     }
 }
