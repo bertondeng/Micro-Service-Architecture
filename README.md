@@ -24,6 +24,8 @@ Zuul, belongs to Netflix too, is a reverse-proxy server, acts like nginx or apac
 	
 	
 Demo:	
-http://localhost:8088/orderService/order/1    returns desired json object.
+http://localhost:8088/orderService/order/1    returns desired json object. This tests Feign client
+
+http://localhost:8088/orderService/order/load/balance	This test the load balancer of Ribbon
 	
 
