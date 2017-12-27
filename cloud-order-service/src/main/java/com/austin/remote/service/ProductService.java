@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import java.util.List;
 
 /**
- * Created by denghao0706 on 2017/12/14.
+ * Created by Austin on 2017/12/14.
  */
 
 @FeignClient(name = "productService")
