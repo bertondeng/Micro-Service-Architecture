@@ -15,14 +15,17 @@ Eureka, which belongs to Netflix, is the default choice for service registry cen
 This application provides product related restful services.
 	
 4 cloud-order-service
-This application provides order related restful services, and depends on product service. Use Feign Client to access to product service
-	
+This application provides order related restful services, and depends on product service. Use Feign Client to access to product service.
+Ribbon is a client side load balancer, and Feign Client already uses Ribbon.
+
 5 cloud-zuul-server
 Zuul, belongs to Netflix too, is a reverse-proxy server, acts like nginx or apache server.
 	
 	
 	
 Demo:	
-http://localhost:8088/orderService/order/1    returns desired json object.
+http://localhost:8088/orderService/order/1    returns desired json object. This tests Feign client
+
+http://localhost:8088/orderService/order/load/balance	This test the load balancer of Ribbon
 	
 
