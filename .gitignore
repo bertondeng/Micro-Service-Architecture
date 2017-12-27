@@ -9,6 +9,7 @@
 *.iws
 *.iml
 *.ipr
+workspace.xml
 
 ### NetBeans ###
 build/
@@ -18,5 +19,6 @@ nbdist/
 
 ### Build ###
 target/
+
 
 

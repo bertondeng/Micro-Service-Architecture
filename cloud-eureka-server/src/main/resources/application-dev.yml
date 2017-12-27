@@ -1,0 +1,16 @@
+server:
+  port: 6001
+
+eureka:
+  instance:
+    hostname: localhost
+
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+    service-url:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+
+  server:
+    wait-time-in-ms-when-sync-empty: 0
+    enable-self-preservation: true

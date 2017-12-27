@@ -1,0 +1,10 @@
+server:
+  port: 9003
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:9001/eureka
+  instance:
+      hostname: localhost
+      instance-id: http://localhost:9003

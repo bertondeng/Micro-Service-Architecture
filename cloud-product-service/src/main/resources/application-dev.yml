@@ -1,0 +1,10 @@
+server:
+  port: 6002
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:6001/eureka
+  instance:
+      hostname: localhost
+      instance-id: http://localhost:6002

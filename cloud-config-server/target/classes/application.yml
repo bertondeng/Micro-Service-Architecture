@@ -1,34 +1,4 @@
-server:
-  port: 4001
 
 spring:
-  application:
-    name: cloud-config-server
-
-  cloud:
-    config:
-      server:
-        git:
-          uri: git@github.com:bertondeng/Micro-Service-Architecture.git
-          username: 840507987@qq.com
-          password: denghao1379
-          search-paths: config
-  rabbitmq:
-    username: 123456
-    password: 123456
-eureka:
-  client:
-    service-url:
-      defaultZone: http://localhost:5001/eureka
-
-  instance:
-      hostname: localhost
-      instance-id: localhost:4001
-
-
-
-
-
-
-
-
+  profiles:
+    active: dev

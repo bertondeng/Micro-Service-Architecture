@@ -2,13 +2,10 @@ server:
   port: 8088
 
 spring:
+  profiles:
+    active: dev
   application:
     name: zuulService
-
-eureka:
-  client:
-    service-url:
-      defaultZone: http://localhost:5001/eureka
 
 zuul:
   routes:
