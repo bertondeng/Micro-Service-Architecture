@@ -3,24 +3,14 @@ server:
 
 eureka:
   instance:
-    prefer-ip-address: true
-    hostname: eureka
+    hostname: localhost
 
   client:
-    registerWithEureka: true
+    registerWithEureka: false
     fetchRegistry: false
     service-url:
-      defaultZone: http://localhost:5001/eureka
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
 
   server:
     wait-time-in-ms-when-sync-empty: 0
     enable-self-preservation: true
-
-spring:
-  application:
-    name: cloud-eureka-server
-  cloud:
-    config:
-      discovery:
-        service-id: cloud-config-server
-        enabled: true

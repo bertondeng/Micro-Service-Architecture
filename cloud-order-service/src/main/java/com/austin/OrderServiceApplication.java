@@ -8,10 +8,10 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.ComponentScans;
 
 /**
- * Created by denghao0706 on 2017/12/14.
+ * Created by Austin on 2017/12/14.
  */
-@EnableDiscoveryClient
 @SpringBootApplication
+@EnableDiscoveryClient
 @EnableFeignClients
 @ComponentScan("com.austin")
 public class OrderServiceApplication {

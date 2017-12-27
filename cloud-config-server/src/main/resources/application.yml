@@ -1,23 +1,17 @@
 server:
   port: 4001
 
-management:
-  context-path: /admin
-
 spring:
   application:
     name: cloud-config-server
 
   cloud:
     config:
-      discovery:
-        enabled: false
-        service-id: configService
       server:
         git:
-          uri: https://github.com/spring-cloud-samples/config-repo
-          username: 123456
-          password: 123456
+          uri: git@github.com:bertondeng/Micro-Service-Architecture.git
+          username: 840507987@qq.com
+          password: denghao1379
           search-paths: config
   rabbitmq:
     username: 123456
@@ -26,6 +20,10 @@ eureka:
   client:
     service-url:
       defaultZone: http://localhost:5001/eureka
+
+  instance:
+      hostname: localhost
+      instance-id: localhost:4001
 
 
 

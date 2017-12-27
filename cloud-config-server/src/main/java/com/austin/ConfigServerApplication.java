@@ -6,7 +6,7 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.config.server.EnableConfigServer;
 
 /**
- * Created by denghao0706 on 2017/12/13.
+ * Created by Austin on 2017/12/13.
  */
 
 @SpringBootApplication

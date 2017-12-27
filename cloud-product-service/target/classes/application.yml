@@ -5,19 +5,10 @@ spring:
   application:
     name: productService
 
-  cloud:
-    config:
-      profile: debug
-      label: master
-      discovery:
-        enabled: true
-        service-id: productService
-
-    inetutils:
-      ignored-interfaces: virbr0,lo
 eureka:
   client:
-    register-with-eureka: true
-    registry-fetch-interval-seconds: 30
     service-url:
       defaultZone: http://localhost:5001/eureka
+  instance:
+      hostname: localhost
+      instance-id: http://localhost:6001

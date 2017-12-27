@@ -14,6 +14,8 @@ zuul:
   routes:
     order:
       path: /order/**
-      serviceId: orderService
-
+      service-id: orderService
+    product:
+      path: /product/**
+      service-id: productService
 
