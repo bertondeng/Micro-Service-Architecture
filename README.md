@@ -5,8 +5,8 @@ This is a demostration of micro-service-architecture based on Spring Cloud
 
 1 cloud-config-server
 	
-	This application provides the function of config-center, you can use a git repository or svn as the configuration center, which
-other clients fetch configuration from the config server.
+	This application provides the function of config-center, you can use a git repository or svn as the configuration center,
+	which other clients fetch configuration from the config server.
 
 2 cloud-eureka-server
 	Eureka, which belongs to Netflix, is the default choice for service registry center.
