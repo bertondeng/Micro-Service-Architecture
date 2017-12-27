@@ -13,9 +13,9 @@ eureka:
 zuul:
   routes:
     order:
-      path: /order/**
+      path: /orderService/**
       service-id: orderService
     product:
-      path: /product/**
+      path: /productService/**
       service-id: productService
 
