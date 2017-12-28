@@ -14,8 +14,10 @@ spring:
           password: denghao1379
           search-paths: config
   rabbitmq:
-    username: 123456
-    password: 123456
+    username: rabbitmq
+    password: rabbitmq
+    host: localhost
+    port: 5672
 eureka:
   client:
     service-url:
