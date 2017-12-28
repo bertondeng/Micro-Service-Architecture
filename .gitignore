@@ -5,20 +5,23 @@
 
 
 ### Intellij IDEA ###
-.idea/
 *.iws
 *.iml
 *.ipr
 workspace.xml
 
 ### NetBeans ###
-build/
-nbbuild/
-dist/
-nbdist/
 
 ### Build ###
-target/
+
+cloud-config-server/.idea/
+cloud-eureka-server/.idea/
+cloud-order-service/.idea/
+cloud-product-service/.idea/
+cloud-zuul-service/.idea/
+
+
+
 
 
 
