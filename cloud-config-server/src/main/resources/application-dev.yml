@@ -7,8 +7,6 @@ spring:
       server:
         git:
           uri: git@github.com:bertondeng/Micro-Service-Architecture.git
-          username: 840507987@qq.com
-          password: denghao1379
           search-paths: config
   rabbitmq:
     username: rabbitmq
